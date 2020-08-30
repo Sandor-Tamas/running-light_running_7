@@ -13,12 +13,8 @@ basic.forever(function () {
     }
     if (irany == 1) {
         if (LED_X == 4) {
-            if (LED_Y < 4) {
-                LED_X = 0
-            }
-            if (LED_Y == 4) {
-                irany = -1
-            } else {
+            LED_X = 0
+            if (LED_Y != 4) {
                 LED_Y += irany
             }
         } else {
@@ -27,9 +23,7 @@ basic.forever(function () {
     } else {
         if (LED_X == 0) {
             LED_X = 4
-            if (LED_Y == 0) {
-                irany = 1
-            } else {
+            if (LED_Y != 0) {
                 LED_Y += irany
             }
         } else {
